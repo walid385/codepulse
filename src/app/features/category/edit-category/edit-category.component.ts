@@ -64,7 +64,7 @@ onDelete(): void {
   if (this.id){
     this.deleteCategorySubscription=this.categoryService.deleteCategory(this.id).subscribe({
       next: (response) => {
-        this.toastr.warning('Category deleted successfully');
+        this.toastr.error('Category deleted successfully');
         this.router.navigateByUrl('/admin/categories');
       }
     });
