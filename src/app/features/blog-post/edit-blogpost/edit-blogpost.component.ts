@@ -7,6 +7,7 @@ import { CategoryService } from '../../category/services/category.service';
 import { Category } from '../../category/models/category.model';
 import { UpdateBlogPostRequest } from '../models/update-blogPost-request.model';
 import { ToastrService } from 'ngx-toastr';
+import { ImageService } from 'src/app/shared/components/image-selector/image.service';
 
 
 @Component({
@@ -26,9 +27,10 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
   getBlogPostSubscription?: Subscription;
   deleteBlogPostSubscription?: Subscription;
   isImageSelectorOpen: boolean = false;
+  ImageSelectSubscription?: Subscription;
 
   constructor(private route: ActivatedRoute, private blogPostService: BlogPostService, private categoryService: CategoryService,
-    private toastr: ToastrService, private router: Router) { }
+    private toastr: ToastrService, private router: Router, private imageService : ImageService) { }
 
 
   ngOnInit(): void {
@@ -49,8 +51,20 @@ export class EditBlogpostComponent implements OnInit, OnDestroy {
         
         }
 
+       this.ImageSelectSubscription= this.imageService.onSelectImage().subscribe({
+          next: (response) => {
+            if (this.model) {
+              this.model.featuredImageUrl = response.url;
+              this.toastr.success('Image selected successfully!');
+              this.closeImageSelector();
+            }
+          }
+        });
+
   }
 });
+
+
 
 }
 
@@ -98,11 +112,19 @@ closeImageSelector(): void {
   this.isImageSelectorOpen = false;
 }
 
+onCloseImage(): void {
+  if (this.model) {
+    this.model.featuredImageUrl = '';
+  }
+}
+
+
   ngOnDestroy(): void {
     this.paramsSubscription?.unsubscribe();
     this.editBlogPostSubscription?.unsubscribe();
     this.getBlogPostSubscription?.unsubscribe();
     this.deleteBlogPostSubscription?.unsubscribe();
+    this.ImageSelectSubscription?.unsubscribe();
   }
 
 }

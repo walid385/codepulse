@@ -54,11 +54,12 @@
                 <div class="mt-3">
                     <label for="featuredImgUrl" class="form-label">Featured Image Url
                         <button type="button" class="btn btn-primary btn-sm ms-3" (click)="onOpenImageSelector()">Select Image</button>
+                        <button type="button" class="btn btn-danger btn-sm ms-3" (click)="onCloseImage()">Close Image</button>
                     </label>
     
-                    <ng-container *ngIf="model.featuredImageUrl !== ''" >
-                        <div>
-                            <img [src]="model.featuredImageUrl" height="100"  class=" my-4" alt="Featured Image">
+                    <ng-container *ngIf="model.featuredImageUrl !== ''">
+                        <div >
+                            <img [src]="model.featuredImageUrl" height="100"  class=" my-4" alt="Featured Image" [ngClass]="{'border border-success': this.onOpenImageSelector}">
                         </div>
                     </ng-container>
                     <input type="text" 
