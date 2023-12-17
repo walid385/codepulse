@@ -6,7 +6,7 @@
     </div>
 
     <ng-container *ngIf="categories$ | async as categories ">
-        <table class="table table-bordered mt-3">
+        <table class="table table-bordered table-dark mt-3 ">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -17,11 +17,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let category of categories">
-                    <td>{{category.id}}</td>
+                    <td style="width: 35%;">{{category.id}}</td>
                     <td>{{category.name}}</td>
                     <td>{{category.urlHandle}}</td>
-                    <td>
-                        <a [routerLink]="['/admin/categories', category.id]" class="btn btn-light">Edit</a>
+                    <td class="d-flex justify-content-center">
+                        <a [routerLink]="['/admin/categories', category.id]" class="btn btn-dark border border-dark-subtle ">Edit</a>
                     </td>
                 </tr>
             </tbody>

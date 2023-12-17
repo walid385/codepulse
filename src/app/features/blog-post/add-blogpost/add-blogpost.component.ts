@@ -44,7 +44,9 @@ export class AddBlogpostComponent implements OnDestroy, OnInit {
         if (this.model) {
           this.model.featuredImageUrl = response.url;
           this.isImageSelectorOpen = false;
-          this.toastr.success('Image selected successfully!');
+          if (this.model.featuredImageUrl) {
+            this.toastr.success('Image selected!');
+          }
         }
       }
     });
@@ -56,12 +58,11 @@ onFormSubmit() {
   this.createBlogPostSubscription=this.blogPostService.createBlogPost(this.model)
   .subscribe({
     next: (response) => {
-      this.toastr.success('Blog post added successfully');
       this.router.navigateByUrl('/admin/blogposts');
+      this.toastr.success('Blog post added successfully!')
     },
     error: (err) => {
-      console.log(err);
-      alert('Something went wrong');
+      this.toastr.error('Failed to add blog post');
     }
   });
 

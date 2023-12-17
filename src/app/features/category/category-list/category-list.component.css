@@ -1,0 +1,7 @@
+td:hover{
+    background-color: #130020;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
+    font-weight: 600;
+}

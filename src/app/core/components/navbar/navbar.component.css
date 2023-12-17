@@ -1,0 +1,17 @@
+nav{
+    background-color: #181A1B;
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav li a{
+    color: #fff;
+}
+
+nav a{
+    color: #fff;
+}
+
+.dropdown-item:hover{
+    background-color: #332644;
+}

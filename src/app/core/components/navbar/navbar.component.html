@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary mb-4">
+<nav class="navbar sticky-top navbar-expand-lg mb-4">
     <div class="container">
       <a class="navbar-brand" [routerLink]="['/']">CodePulse</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,16 +9,34 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"  [routerLink]="['/']">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Admin
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" [routerLink]="['/admin/categories']">Categories</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" [routerLink]="['/admin/blogposts']">BlogPost</a></li>
-            </ul>
-          </li>
+          <ng-container *ngIf="user !== undefined && user.roles.includes('Writer')" >
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item" [routerLink]="['/admin/categories']">Categories</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" [routerLink]="['/admin/blogposts']">BlogPost</a></li>
+              </ul>
+            </li>
+          </ng-container>
+        </ul>
+        
+        <ul>
+          <div class="d-flex mt-3">
+            <ng-container *ngIf="user == undefined;else showLogout ">
+              <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
+              <a [routerLink]="['/register']" class="btn btn-primary ms-3">Register</a>
+            </ng-container>
+            <ng-template #showLogout>
+              <div class="d-flex align-items-center">
+                <span>Hi, {{user?.email}}</span>
+                <button class="btn btn-primary ms-3" (click)="logout()">Logout</button>
+              </div>
+            </ng-template>
+            
+          </div>
         </ul>
       </div>
     </div>
