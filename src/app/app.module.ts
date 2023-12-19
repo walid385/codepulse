@@ -20,6 +20,8 @@ import { HomeComponent } from './features/public/home/home.component';
 import { BlogDetailsComponent } from './features/public/blog-details/blog-details.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { RegisterComponent } from './features/auth/register/register.component';
+import Swal from 'sweetalert2';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     ImageSelectorComponent,
     HomeComponent,
     BlogDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
   ],
   providers: [
   {
