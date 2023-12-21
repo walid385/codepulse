@@ -22,6 +22,8 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { RegisterComponent } from './features/auth/register/register.component';
 import Swal from 'sweetalert2';
+import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-email.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import Swal from 'sweetalert2';
     HomeComponent,
     BlogDetailsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ConfirmEmailComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import Swal from 'sweetalert2';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     MarkdownModule.forRoot(),
+    NgHttpLoaderModule.forRoot(),
   ],
   providers: [
   {

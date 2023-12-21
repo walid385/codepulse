@@ -11,6 +11,7 @@ import { BlogDetailsComponent } from './features/public/blog-details/blog-detail
 import { LoginComponent } from './features/auth/login/login.component';
 import { authGuard } from './features/auth/guards/auth.guard';
 import { RegisterComponent } from './features/auth/register/register.component';
+import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-email.component';
 
 const routes: Routes = [
 
@@ -25,9 +26,16 @@ const routes: Routes = [
   },
 
   {
+    path: 'confirm-email',
+    component: ConfirmEmailComponent
+  },
+
+  {
     path: 'register',
     component: RegisterComponent
   },
+
+  
 
   {
     path: 'blog/:url',

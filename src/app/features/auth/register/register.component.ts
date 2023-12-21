@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Validators, FormControl } from '@angular/forms';
+import { SpinnerVisibilityService } from 'ng-http-loader';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthService, 
     private cookieService: CookieService, 
     private toastr: ToastrService, 
-    private router: Router) {
+    private router: Router,
+    private spinner: SpinnerVisibilityService) {
     this.model = {
       email: '',
       password: '',
@@ -35,6 +37,7 @@ export class RegisterComponent implements OnInit {
   
 
   onFormSubmit(): void {
+    this.spinner.show();
     this.authService.register(this.model).subscribe({
       next: () => {
         this.model = {
@@ -44,18 +47,19 @@ export class RegisterComponent implements OnInit {
         };
         Swal.fire({
           title: 'Success!',
-          text: 'You have successfully registered!',
+          text: 'You have successfully registered!, Please confirm your email',
           icon: 'success',
           confirmButtonText: 'Ok'
           });
-        this.router.navigateByUrl('/auth/login');
+          this.spinner.hide();
       },
       error: err => {
+        this.spinner.hide();
         this.errorMessages = err.error.errors[''];
         console.log(this.errorMessages)
         Swal.fire({
           title: 'Error!',
-          text: 'Something went wrong!' ,
+          text: 'Something went wrong! Please try again',
           icon: 'error',
           confirmButtonText: 'Ok'
           });

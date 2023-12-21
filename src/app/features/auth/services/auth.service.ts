@@ -28,6 +28,10 @@ export class AuthService {
     return this.http.post(`${environment.apiBaseUrl}/api/auth/register`, request);
   }
 
+  confirmEmail(request: any): Observable<any> {
+    return this.http.post(`${environment.apiBaseUrl}/api/auth/confirm-email`, request);
+  }
+
   setUser(user: User): void {
 
     this.$user.next(user);
