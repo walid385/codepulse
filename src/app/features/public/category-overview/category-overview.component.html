@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex justify-content-end mt-5">
+    <a [routerLink]="['/blogpost/all']" class="btn btn-dark border border-dark-subtle ">All Articles</a>
+</div>
+  <div class="my-3">
+    <ng-container *ngIf="category$ | async as categories">
+      <div class="ag-format-container">
+        <!-- Moved the *ngFor to iterate over each ag-courses_item -->
+        <div class="ag-courses_box" >
+          <div *ngFor="let category of categories" class="ag-courses_item" (click)="jaja(category.id)" style="cursor: pointer;" [routerLink]="['/categories/blogs', category.id]">
+            <div class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+              <div class="ag-courses-item_title">
+                {{ category.name }} 
+              </div>
+            </div> <!-- Closing tag for "ag-courses-item_link" -->
+          </div> <!-- Closing tag for "ag-courses_item" -->
+        </div> <!-- Closing tag for "ag-courses_box" -->
+      </div> <!-- Closing tag for "ag-format-container" -->
+    </ng-container>
+  </div>
+</div>
