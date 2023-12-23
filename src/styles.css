@@ -4,13 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    background-color: #302e2e;
 }
+
 
 
 .images-container-modal{
@@ -35,6 +36,14 @@ body{
 }
 
 .btn-primary:hover{
+    background-color: #a16dd8;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
+}
+
+.btn-primary:active{
     background-color: #a16dd8;
     color: #fff;
     border: none;

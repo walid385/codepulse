@@ -29,6 +29,7 @@ export class AddCategoryComponent implements OnDestroy {
     .subscribe({
       next: () => {
         this.toastr.success('Category added successfully');
+        this.categoryService.refreshCategories(); // Refresh categories after adding
         this.router.navigateByUrl('admin/categories');
       },
       error: (err) => {

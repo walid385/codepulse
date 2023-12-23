@@ -9,6 +9,17 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"  [routerLink]="['/']">Home</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu bg-dark" >
+              <li *ngFor="let category of categories">
+                <a class="dropdown-item" [routerLink]="['/categories/blogs', category.id ]">{{category.name}}</a>
+              </li>
+            </ul>
+                       
+          </li>
           <ng-container *ngIf="user !== undefined && user.roles.includes('Writer')" >
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,6 +43,10 @@
             <ng-template #showLogout>
               <div class="d-flex align-items-center">
                 <span>Hi, {{user?.email}}</span>
+                <div class="vr m-2"></div>            
+                <hr class="dropdown-divider">
+                <span class="badge rounded-pill bg-warning m-1  " *ngFor="let roles of user?.roles" >{{roles.toUpperCase()}}</span>
+                <div class="vr m-2"></div>                      
                 <button class="btn btn-primary ms-3" (click)="logout()">Logout</button>
               </div>
             </ng-template>

@@ -38,7 +38,7 @@ export class AddBlogpostComponent implements OnDestroy, OnInit {
    }
 }
   ngOnInit(): void {
-    this.categories$=this.categoryService.getAllCategories();
+    this.categories$=this.categoryService.getAllCategoriesWithPosts();
     this.imageSelectSubscription=this.imageService.onSelectImage().subscribe({
       next: (response) => {
         if (this.model) {

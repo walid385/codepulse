@@ -20,6 +20,6 @@ export class BlogpostListComponent implements OnInit {
   ngOnInit(): void {
     this.spinner.show();
     this.spinner.hide();
-   this.blogPosts$ = this.blogPostService.getAllBlogPosts();
+    this.blogPosts$ = this.blogPostService.getAllBlogPosts();
   }
 }

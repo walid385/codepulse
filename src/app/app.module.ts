@@ -24,6 +24,8 @@ import { RegisterComponent } from './features/auth/register/register.component';
 import Swal from 'sweetalert2';
 import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-email.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { CategoryOverviewComponent } from './features/public/category-overview/category-overview.component';
+import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     LoginComponent,
     RegisterComponent,
     ConfirmEmailComponent,
+    CategoryOverviewComponent,
+    CategoriyBlogsComponent,
   ],
   imports: [
     BrowserModule,
