@@ -26,6 +26,7 @@ import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-ema
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { CategoryOverviewComponent } from './features/public/category-overview/category-overview.component';
 import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
+import { HeroComponent } from './features/public/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categ
     ConfirmEmailComponent,
     CategoryOverviewComponent,
     CategoriyBlogsComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,

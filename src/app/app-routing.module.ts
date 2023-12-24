@@ -14,8 +14,14 @@ import { RegisterComponent } from './features/auth/register/register.component';
 import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-email.component';
 import { CategoryOverviewComponent } from './features/public/category-overview/category-overview.component';
 import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
+import { HeroComponent } from './features/public/hero/hero.component';
 
 const routes: Routes = [
+
+  {
+    path:'hero',
+    component: HeroComponent
+  },
 
   {
     path: 'blogpost/all',
