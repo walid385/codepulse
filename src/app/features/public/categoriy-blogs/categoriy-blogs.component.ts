@@ -14,20 +14,21 @@ import { AuthService } from '../../auth/services/auth.service';
 export class CategoriyBlogsComponent implements OnInit {
 
   category: Category[] = [];
-
   category$?: Observable<Category[]>;
   id: string | null | number = null;
   categoryBlog: any[] | undefined = [];
   user?: User;
+  isLoading: boolean = true; // Add this line
 
   constructor(private categoryService: CategoryService, private route: ActivatedRoute,
     private authService: AuthService,
     private router: Router) { }
 
   ngOnInit(): void {
-     this.route.paramMap.subscribe({
+    this.route.paramMap.subscribe({
       next: (params) => {
         this.id = params.get('id');
+        this.isLoading = true; // Set loading to true when starting to load
 
         if (this.id) {
           this.category$ = this.categoryService.getAllCategoriesWithPosts();
@@ -38,15 +39,16 @@ export class CategoriyBlogsComponent implements OnInit {
               this.category.forEach((category) => {
                 if (category.id === this.id) {
                   this.categoryBlog = category.blogPosts;
-                  
-                  this.categoryBlog?.forEach((blog) => {
-
-                  }
-                  );
                 }
               });
+              this.isLoading = false; // Set loading to false when blogs are loaded
+            },
+            error: (err) => {
+              this.isLoading = false; // Ensure loading is false even if there's an error
             }
           });
+        } else {
+          this.isLoading = false; // Set loading to false if no id is found
         }
       }
     });
