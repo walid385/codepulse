@@ -37,6 +37,8 @@ export class NavbarComponent implements OnInit {
 
     this.categoryService.categories$.subscribe(categories => {
       this.categories = categories;
+      this.categories.sort((a, b) => a.name.localeCompare(b.name));
+
       },
       error => {
         console.log(error);

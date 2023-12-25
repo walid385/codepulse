@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       next: (data) => {
         this.blogi = data;
         console.log(this.blogi);
-      }
+      },
     });
 
    
