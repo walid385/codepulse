@@ -12,29 +12,35 @@
             <h1 class="card-title text-center">Register</h1>
             <hr>
             <form (ngSubmit)="onFormSubmit()" class="needs-validation" novalidate>
-              <div class="mb-3">
+              <div class="mb-2">
                 <label for="email" class="form-label">E-Mail</label>
                 <input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" required>
                 <div class="invalid-feedback">
                   Please enter a valid email.
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="mb-2">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password" required>
                 <div class="invalid-feedback">
                   Please enter your password.
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="mb-2">
                 <label for="passwordConfirmed" class="form-label">Confirm Password</label>
                 <input type="password" class="form-control" id="passwordConfirmed" name="passwordConfirmed" [(ngModel)]="model.passwordConfirmed" required>
                 <div class="invalid-feedback">
                   Please confirm your password.
                 </div>
               </div>
-              <div class="d-grid mt-4">
-                <button type="submit" class="btn btn-primary">Register</button>
+              <div class="d-grid mt-4 mb-4 ">
+                <button type="submit" class="btn btn-primary registerbtn ">Register</button>
+              </div>
+              <div class="linksection">
+                <p>
+                  Already have an Account?
+                  <a [routerLink]="['/login']" class="link-opacity-50 links mb-1">Login!</a> <br>
+                </p>
               </div>
             </form>
           </div>

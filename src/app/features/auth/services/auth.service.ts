@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 import { CookieService } from 'ngx-cookie-service';
 import { RegisterRequest } from '../models/register.request.model';
+import { ForgotPassword } from '../models/forgot-password.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class AuthService {
 
   confirmEmail(request: any): Observable<any> {
     return this.http.post(`${environment.apiBaseUrl}/api/auth/confirm-email`, request);
+  }
+
+  forgotPassword(request: ForgotPassword): Observable<any> {
+    return this.http.post(`${environment.apiBaseUrl}/api/auth/forgotpassword`, request);
   }
 
   setUser(user: User): void {

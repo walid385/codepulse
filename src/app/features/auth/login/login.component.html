@@ -11,22 +11,30 @@
             <h1 class="card-title text-center">Login</h1>
             <hr>
             <form (ngSubmit)="onFormSubmit()" class="needs-validation" novalidate>
-              <div class="mb-3">
+              <div class="mb-2">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" [(ngModel)]="model.email" required>
                 <div class="invalid-feedback">
                   Please enter a valid email.
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="mb-2">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password" required>
                 <div class="invalid-feedback">
                   Please enter your password.
                 </div>
               </div>
-              <div class="d-grid mt-5">
-                <button type="submit" class="btn btn-primary">Login</button>
+              <div class="d-grid mt-5 mb-4">
+                <button type="submit" class="btn btn-primary loginbtn">Login</button>
+              </div>
+              <div class="linksection">
+                <p>
+                  No Account yet?
+                  <a [routerLink]="['/register']" class="link-opacity-50 links">Register!</a> <br>
+                  Forgot your Password?
+                  <a [routerLink]="['/forgot-password']" class="link-opacity-50 links">Reset Password!</a>
+                </p>
               </div>
             </form>
           </div>

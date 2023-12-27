@@ -2,6 +2,8 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
 }
 
 
@@ -46,4 +48,23 @@ input:focus {
   color: #fff;
   border: none;
   font-weight: 500;
+}
+
+.loginbtn{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+.links {
+  color: #cd9cff;
+}
+
+.links:hover {
+  color: #ffab3c;
+  text-decoration: none;
+}
+
+.linksection{
+  font-size: 0.8em;
+  opacity: 0.6;
 }

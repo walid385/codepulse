@@ -19,9 +19,6 @@ export class RegisterComponent implements OnInit {
   
 
   constructor(private authService: AuthService, 
-    private cookieService: CookieService, 
-    private toastr: ToastrService, 
-    private router: Router,
     private spinner: SpinnerVisibilityService) {
     this.model = {
       email: '',
