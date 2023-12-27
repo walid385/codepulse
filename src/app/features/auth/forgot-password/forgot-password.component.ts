@@ -33,11 +33,10 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.model.clientURI = window.location.href;
   }
 
   onFormSubmit(): void {
-    
+    this.model.clientURI = window.location.origin + '/reset-password'
     this.spinner.show();
     this.authService.forgotPassword(this.model).subscribe({
       next: () => {
@@ -48,6 +47,7 @@ export class ForgotPasswordComponent implements OnInit {
           icon: 'success',
           confirmButtonText: 'Ok'
           });
+          this.model.email = '';
           this.spinner.hide();
       },
       error: err => {
