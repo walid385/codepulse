@@ -16,6 +16,7 @@ import { CategoryOverviewComponent } from './features/public/category-overview/c
 import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
 import { HeroComponent } from './features/public/hero/hero.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 
 const routes: Routes = [
 
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent
   },
   {
     path: '',
