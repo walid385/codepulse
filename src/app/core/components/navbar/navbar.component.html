@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg ">
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">CodePulse</a>
+      <a class="navbar-brand" [routerLink]="['/']"><span class="logoname">WebPulse</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,7 +45,7 @@
             </ng-container>
             <ng-template #showLogout>
               <div class="d-flex align-items-center">
-                <span>Hi, {{user?.email}}</span>
+                <span class="mail">Hi, {{user?.email}}</span>
                 <div class="vr m-2"></div>            
                 <hr class="dropdown-divider">
                 <span class="badge rounded-pill bg-danger m-1  " *ngFor="let roles of user?.roles" >{{roles.toUpperCase()}}</span>

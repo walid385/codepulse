@@ -5,7 +5,7 @@
   }
   
   .my-5 {
-    margin-top: 2rem;
+    margin-top: rem;
     margin-bottom: 2rem;
   }
   
@@ -16,8 +16,7 @@
   }
   
   .grid-item {
-    display: flex;
-    flex-direction: column;
+  position: relative;
   }
   
   .card {
@@ -47,26 +46,36 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  
-  .overlay-text {
-    color: white;
-    font-size: 1.9rem;
+
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.8);
+    z-index: 2;
+    border-radius: 20px;
+  }
+  
+  .overlay {
+    color: white;
+    text-align: center;
   }
   
   .lockedIcon {
     fill: #ffffff;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
   }
   
   .card-body {
+    color: #e2e2e2;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -76,32 +85,54 @@
   }
   
   .card-title {
-    font-size: 1.2rem;
-    color: #e2e2e2;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    background: linear-gradient(to bottom right, #dabdbd 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
+  hr {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.4em;
+  }
   .card-text {
-    font-size: 0.9rem;
-    color: #e2e2e2;
-    flex-grow: 1;
+    background: linear-gradient(to bottom right, #dabdbd 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    font-size: 0.9rem;
+    line-height: 1.2; /* Set your line height */
+    height: auto; /* Let the height be determined by content up to a point */
+    max-height: 3.6em; /* 3 lines of text, for example, adjust as necessary */
     overflow: hidden;
+    position: relative;
+    padding-right: 1em; /* Adjust as necessary for the ellipsis */
   }
-  
+  .card-text::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom right, #dabdbd 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }    
+
   .btn-outline-light {
+    font-family: 'Poppins', sans-serif;
     padding: 8px 15px;
-    color: #3897f0;
-    border: 1px solid #3897f0;
+    color: #ffffff;
+    border: none;
     border-radius: 5px;
     text-transform: uppercase;
     font-size: 0.8rem;
-    font-weight: bold;
     transition: background-color 0.25s, color 0.25s;
+    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+
   }
   
   .btn-outline-light:hover {
-    color: #fff;
-    background-color: #3897f0;
+    color: #ffffff;
+    background: linear-gradient(to bottom right, #ac93ff 0%, #630101 100%);
   }
   
   .disabled-blog {

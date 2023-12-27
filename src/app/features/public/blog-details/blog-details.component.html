@@ -1,18 +1,18 @@
 <ng-container *ngIf="blogPost$ | async as blogPost">
     <div class="container">
         <div class="py-5">
-            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto blog">
                 <img [src]="blogPost.featuredImageUrl" [title]="blogPost.title" alt="" 
                 class="img-fluid">
 
-                <h1 class="mt-4">{{blogPost.title}}</h1>
+                <h1 class="mt-4 titleblog">{{blogPost.title}}</h1>
 
-                <div class="d-flex justify-content-between mt-4">
+                <div class="d-flex justify-content-between mt-4 dateauthor">
                     <span>{{blogPost.author}}</span>
                     <span>{{blogPost.publishedDate | date:'dd-MM-yyyy'}}</span>
                 </div>
 
-                <div *ngIf="blogPost.categories" class="mt-4">
+                <div *ngIf="blogPost.categories" class="mt-4 badgess">
                     <span *ngFor="let category of blogPost.categories" class="badge bg-secondary me-2">{{category.name}}</span>
                 </div>
 

@@ -27,6 +27,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 import { CategoryOverviewComponent } from './features/public/category-overview/category-overview.component';
 import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
 import { HeroComponent } from './features/public/hero/hero.component';
+import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { HeroComponent } from './features/public/hero/hero.component';
     CategoryOverviewComponent,
     CategoriyBlogsComponent,
     HeroComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

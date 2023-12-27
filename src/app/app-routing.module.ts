@@ -15,6 +15,7 @@ import { ConfirmEmailComponent } from './features/auth/confirm-email/confirm-ema
 import { CategoryOverviewComponent } from './features/public/category-overview/category-overview.component';
 import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categoriy-blogs.component';
 import { HeroComponent } from './features/public/hero/hero.component';
+import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 
 const routes: Routes = [
 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent
   },
   {
     path: '',
