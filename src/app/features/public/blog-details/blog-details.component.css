@@ -7,9 +7,10 @@ img{
 .blog-content{
     color: #d4caca;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
+    line-height: 1.75;
 }
 
 .mark{
@@ -32,7 +33,7 @@ img{
 
 .dateauthor{
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 2px;
     background: linear-gradient(to bottom right, #CFBEBE 0%, #FFFFFF 100%);
@@ -44,8 +45,11 @@ img{
 
 .badgess{
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: .8rem;
     letter-spacing: 2px;
+    border: 1px solid #1b1616;
+    color: linear-gradient(to bottom right, #CFBEBE 0%, #FFFFFF 100%);
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
 } 
 
 

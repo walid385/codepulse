@@ -12,8 +12,8 @@
                     <span>{{blogPost.publishedDate | date:'dd-MM-yyyy'}}</span>
                 </div>
 
-                <div *ngIf="blogPost.categories" class="mt-4 badgess">
-                    <span *ngFor="let category of blogPost.categories" class="badge bg-secondary me-2">{{category.name}}</span>
+                <div *ngIf="blogPost.categories" class="mt-4 ">
+                    <span *ngFor="let category of blogPost.categories" class="badge bg-secondary me-2 badgess">{{category.name}}</span>
                 </div>
 
                 <div class="mt-4 blog-content">

@@ -1,0 +1,39 @@
+
+
+<div class="wrapper mt-3">
+    <div class="container my-5">
+        <hr class="mb-5">
+        <h2 class="text-center text-white mb-5">Categories</h2>
+      <div class="my-2 ">
+        <ng-container *ngIf="category$ | async as categories">
+          <div class="slider">
+            <!-- Slides Container -->
+            <div class="slides" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+              <div *ngFor="let category of categories; let i = index" class="slide">
+                <!-- Category Item -->
+                <div class="ag-courses_item" (click)="jaja(category.id)" [routerLink]="['/categories/blogs', category.id]">
+                  <!-- Category Link and Background -->
+                  <div class="ag-courses-item_link">
+                    <div class="ag-courses-item_bg" [style.background]=" "></div>
+                    <div class="ag-courses-item_title">{{ category.name }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Arrows for Navigation -->
+            <div class="arrow left-arrow" (click)="moveSlide(-1)">&#10094;</div>
+            <div class="arrow right-arrow" (click)="moveSlide(1)">&#10095;</div>
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+              <span *ngFor="let category of categories; let i = index"
+                    class="nav-button"
+                    [class.active]="i === currentIndex"
+                    (click)="setSlide(i)"></span>
+            </div>
+          </div>
+        </ng-container>
+        <a class="d-flex justify-content-center align-content-center mt-5 btn btn-primary linkcategory" [routerLink]="['/blogpost/all']">All Categories</a>
+      </div>
+      <hr class="mt-5">
+    </div>
+</div>
