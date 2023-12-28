@@ -29,6 +29,8 @@ import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categ
 import { HeroComponent } from './features/public/hero/hero.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
+import { FooterComponent } from './core/components/footer/footer/footer.component';
+import { SliderComponent } from './features/public/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { ResetPasswordComponent } from './features/auth/reset-password/reset-pas
     HeroComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
+    FooterComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

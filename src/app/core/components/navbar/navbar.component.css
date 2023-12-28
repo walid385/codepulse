@@ -52,6 +52,21 @@ nav a{
     width: 2px;
   }
 
+  .roles{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+  }
+
+  .mail{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .logoutt{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+  }
+
 /* width */
 ::-webkit-scrollbar {
     width: 20px;

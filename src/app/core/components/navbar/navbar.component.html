@@ -14,7 +14,7 @@
               Categories
             </a>
             <ul class="dropdown-menu bg-dark" >
-              <a href="" class="dropdown-item " [routerLink]="['/blogpost/all']">All Articles</a>
+              <a class="dropdown-item " [routerLink]="['/blogpost/all']">All Articles</a>
               <hr class="dropdown-divider">
               <li *ngFor="let category of categories">
                 <a class="dropdown-item" [routerLink]="['/categories/blogs', category.id ]">{{category.name}}</a>
@@ -45,12 +45,12 @@
             </ng-container>
             <ng-template #showLogout>
               <div class="d-flex align-items-center">
-                <span class="mail">Hi, {{user?.email}}</span>
+                <span class="mail">{{user?.email}}</span>
                 <div class="vr m-2"></div>            
                 <hr class="dropdown-divider">
-                <span class="badge rounded-pill bg-danger m-1  " *ngFor="let roles of user?.roles" >{{roles.toUpperCase()}}</span>
+                <span class="badge rounded-pill bg-danger m-1 roles " *ngFor="let roles of user?.roles" >{{roles.toUpperCase()}}</span>
                 <div class="vr m-2"></div>                      
-                <button class="btn btn-primary ms-3" (click)="logout()">Logout</button>
+                <button class="btn btn-primary ms-3 logoutt" (click)="logout()">Logout</button>
               </div>
             </ng-template>
             

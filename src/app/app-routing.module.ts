@@ -17,7 +17,7 @@ import { CategoriyBlogsComponent } from './features/public/categoriy-blogs/categ
 import { HeroComponent } from './features/public/hero/hero.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
-
+import { SliderComponent } from './features/public/slider/slider.component';
 const routes: Routes = [
 
   {
@@ -53,8 +53,12 @@ const routes: Routes = [
     component: ResetPasswordComponent
   },
   {
+    path: 'slidertest',
+    component: SliderComponent
+  },
+  {
     path: '',
-    component: CategoryOverviewComponent
+    component: HeroComponent
   },
   {
     path: 'categories/blogs/:id',
