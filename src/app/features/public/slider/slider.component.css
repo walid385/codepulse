@@ -37,7 +37,7 @@ html, body {
     animation: fade linear;
     animation-timeline: scroll();
     animation-duration: 1s;
-    transform: translateY(-200px);
+    transform: translateY(-500px);
   }
 
   
@@ -47,11 +47,11 @@ html, body {
       transform: translateY(-100px);
     }
     10%{
-      opacity: 0.4;
+      opacity: 0.2;
       transform: translateY(-50px);
     }
-    20% {
-      opacity: 0.7;
+    50% {
+      opacity: 0.8;
       transform: translateY(0px);
   
     }
@@ -215,7 +215,7 @@ html, body {
       -o-transition: all .5s ease;
       transition: all .5s ease;
 
-        background-color: #510094;
+        background: linear-gradient(to bottom right, #210041 0%, #ffffff 100%)
     }
 
     
