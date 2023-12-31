@@ -53,8 +53,8 @@ const routes: Routes = [
     component: ResetPasswordComponent
   },
   {
-    path: 'slidertest',
-    component: SliderComponent
+    path: 'categories/all',
+    component: CategoryOverviewComponent
   },
   {
     path: '',

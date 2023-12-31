@@ -4,6 +4,9 @@
     background: linear-gradient(to right, #141e30, #243b55);
 
     color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
   }
 
   .small{

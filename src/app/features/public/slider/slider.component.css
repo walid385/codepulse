@@ -3,6 +3,14 @@ html, body {
     padding: 0;
     height: 100%;
   }
+
+  html {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+  }
   
   body {
     display: flex;
@@ -13,6 +21,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
   hr{
     width: 100%;
@@ -28,6 +37,18 @@ html, body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
   }
+
+  .sectitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
+  }
+
   
   .container {
     flex: 1; /* This ensures that the container takes up all available space */
@@ -40,6 +61,13 @@ html, body {
     transform: translateY(-500px);
   }
 
+  .hrtitle{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 222, 222, 0.75), rgba(0, 0, 0, 0));
+  }
+
+
   
   @keyframes fade {
     0% {
@@ -47,11 +75,11 @@ html, body {
       transform: translateY(-100px);
     }
     10%{
-      opacity: 0.2;
+      opacity: 0.5;
       transform: translateY(-50px);
     }
     50% {
-      opacity: 0.8;
+      opacity: 0.9;
       transform: translateY(0px);
   
     }
@@ -64,10 +92,11 @@ html, body {
   
   .slider {
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     flex: 1; /* Removed duplicate property */
-    height: 350px;
+    height: 320px;
+    margin: 0 auto;
   }
   
   .slides {
@@ -82,6 +111,7 @@ html, body {
     height: 100%;
     cursor: pointer;
     text-align: center;
+    box-shadow: 0 0 28px rgba(0, 0, 0, 1);
   }
   
   .arrow {
@@ -100,6 +130,16 @@ html, body {
   
   .right-arrow {
     right: 1em;
+  }
+
+  .left-arrow:hover {
+    scale: 1.1;
+    color: rgb(5, 54, 66);
+  }
+  
+  .right-arrow:hover {
+    scale: 1.1;
+    color: rgb(5, 54, 66);
   }
   
   .nav-buttons {
@@ -155,8 +195,7 @@ html, body {
     .ag-courses-item_link {
       display: block;
       padding: 30px 20px;
-      background-color: #121212;
-    
+      background: linear-gradient(to bottom right, #360101 0%, #1b0661 100%);
       overflow: hidden;
     
       position: relative;
@@ -206,8 +245,9 @@ html, body {
       width: 128px;
       z-index: 1;
       position: absolute;
-      top: -75px;
-      right: -75px;
+      bottom: -30%;
+      right: 50%;
+      -webkit-transform: translateX(50%);
     
       border-radius: 50%;
     
@@ -215,8 +255,9 @@ html, body {
       -o-transition: all .5s ease;
       transition: all .5s ease;
 
-        background: linear-gradient(to bottom right, #210041 0%, #ffffff 100%)
+        background: linear-gradient(to bottom right, #680263 20%, rgb(56, 151, 189) 100%);
     }
 
+    
     
       

@@ -1,31 +1,16 @@
-.container{
-  animation: fade linear;
-  animation-timeline: scroll();
-  animation-duration: 1s;
-  transform: translateY(-200px);
+.pagetitle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  10%{
-    opacity: 0.4;
-    transform: translateY(-50px);
-  }
-  20% {
-    opacity: 0.7;
-    transform: translateY(0px);
-
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(5px);
-
-  }
+.dividertitle{
+  width: 50%;
+  border: 0;
+  margin: 0 auto;
+  border-top: 1px solid #ffffff;
 }
-
 
 .ag-format-container {
     width: 1142px;

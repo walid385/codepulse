@@ -1,0 +1,49 @@
+
+.wrapper{
+    background: linear-gradient(90deg, rgba(73,36,111,1) 0%, rgba(26,20,37,1) 61%);
+    border-top: 1px solid #353535;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+
+.aboutsection{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.texttitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
+}
+
+.hrtitle{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 222, 222, 0.75), rgba(0, 0, 0, 0));
+}
+
+  .aboutimg {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+  }
+
+  .paratext{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom right, #e4e4e4 0%, #aaaaaa 100%);
+    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: justify;
+  }
+  
+
