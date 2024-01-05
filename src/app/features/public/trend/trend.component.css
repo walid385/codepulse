@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.blogpost{
+    width: 100%;
+    padding: 5rem;
+    /*glass blackground*/
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10rem);
+    border-radius: 1rem;
+    box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
+    align-items: center;
+    display: flex;
+}
+.blogpost__img{
+    min-width: 35rem;
+    max-width: 35rem;
+    height: 35rem;
+    transform: translateX(-8rem);
+    position: relative;
+}
+
+.blogpost__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+}
+
+.blogpost__img::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(79, 172,254, .8), rgba(0, 244, 254, .8));
+    opacity: 0.5;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.9);
+}
+
+.blogpost__date span{
+    display: block;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.5);
+    font-weight: 600;
+    margin: .5rem 0;
+}
+
+.blogpost__title{
+    font-size: 2rem;
+    color: #000;
+    font-weight: 700;
+    margin: 1.5rem 0 2rem;
+    text-transform: uppercase;
+}
+
+.blogpost__text{
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.blogpost__cta{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    background-image: linear-gradient(45deg, #00f4fe, #064452);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.blogpost__cta:hover{
+    transform: translateY(-.5rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.5);
+    background-image: linear-gradient(45deg, #064452, #00f4fe);
+}
+
+@media (min-width: 1.6875em) and (max-width: 43.75em) {
+
+    .wrapper{
+    }
+
+    .blogpost{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .blogpost__img{
+      transform: translate(0, -8rem);
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+}
+

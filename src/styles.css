@@ -10,33 +10,18 @@ Document
 Use a better box model (opinionated).
 */
 
-*,
-::before,
-::after {
-	box-sizing: border-box;
+
+html{
+	margin: 0;
+	padding: 0;
 }
 
 :root {
 
-    font-size: 80%;
+    font-size: 62.5%;
 }
 
-html {
-	/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
-	font-family:
-		system-ui,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
-	line-height: 1.15; /* 1. Correct the line height in all browsers. */
-	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
-	-moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
-	tab-size: 4; /* 3 */
-}
+
 
 /*
 Sections
@@ -323,3 +308,11 @@ body{
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
 }
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(90deg, rgba(73,36,111,1) 0%, rgba(26,20,37,1) 61%);
+  }
+  
+  

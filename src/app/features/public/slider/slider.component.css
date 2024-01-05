@@ -47,6 +47,7 @@ html, body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
+    z-index: 1;
   }
 
   
@@ -161,7 +162,7 @@ html, body {
   }
   
   .nav-button.active {
-    background-color: #717171;
+    background-color: #363636;
   }
     
     
@@ -259,5 +260,46 @@ html, body {
     }
 
     
-    
-      
+@media (min-width: 1.6875em) and (max-width: 50em) {
+  .left-arrow {
+    left: .3em;
+  }
+
+  .right-arrow {
+    right: .3em;
+  }
+
+  .nav-buttons{
+    gap: 0.5em;
+  }
+
+  .linkcategory{
+    font-size: 1rem;
+  }
+
+  .container{
+    transform: translateY(-50px);
+
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    10%{
+      opacity: 0.5;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 0.9;
+      transform: translateY(0px);
+  
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(5px);
+  
+    }
+  }
+}

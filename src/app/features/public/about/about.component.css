@@ -1,8 +1,113 @@
+.canvas-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #4e0549;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
 
+.canvas-wrapper .aurora-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(194, 194, 194, 0.131);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas-wrapper .circle {
+  width: 150%;
+  aspect-ratio: 0.8;
+  margin: 0px auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.canvas-wrapper .circle.circle-0 {
+  background: radial-gradient(ellipse, #1c2e59, transparent, transparent);
+  animation: moveAround0 16s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-1 {
+  background: radial-gradient(ellipse, #271848, transparent, transparent);
+  animation: moveAround1 16s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-2 {
+  background: radial-gradient(ellipse, #300257, transparent, transparent);
+  animation: moveAround2 16s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-3 {
+  background: radial-gradient(ellipse, #57114f, transparent, transparent);
+  animation: moveAround3 16s ease-in-out infinite;
+}
+
+@keyframes moveAround0 {
+  0% {
+    transform: translate(-40%, -30%);
+  }
+  50% {
+    transform: translate(0%, 20%);
+  }
+  100% {
+    transform: translate(-40%, -30%);
+  }
+}
+
+@keyframes moveAround1 {
+  0% {
+    transform: translate(-70%, -70%);
+  }
+  50% {
+    transform: translate(-40%, -40%);
+  }
+  100% {
+    transform: translate(-70%, -70%);
+  }
+}
+
+@keyframes moveAround2 {
+  0% {
+    transform: translate(30%, -80%);
+  }
+  50% {
+    transform: translate(-30%, -50%);
+  }
+  100% {
+    transform: translate(30%, -80%);
+  }
+}
+
+@keyframes moveAround3 {
+  0% {
+    transform: translate(-25%, 0%);
+  }
+  50% {
+    transform: translate(-76%, -45%);
+  }
+  100% {
+    transform: translate(-25%, 0%);
+  }
+}
+
+
+
+
+
+/* 
 .wrapper{
     background: linear-gradient(90deg, rgba(73,36,111,1) 0%, rgba(26,20,37,1) 61%);
     border-top: 1px solid #353535;
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .aboutsection{
@@ -46,4 +151,9 @@
     text-align: justify;
   }
   
-
+  @media (min-width: 1.6875em) and (max-width: 50em) {
+    .wrapper{
+      display: none;
+    }
+  }
+ */

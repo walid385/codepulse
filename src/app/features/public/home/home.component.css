@@ -82,7 +82,7 @@
   font-size: 1.2rem;
 }
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   background: linear-gradient(to bottom right, #dabdbd 0%, #FFFFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,7 +103,8 @@ hr {
   max-height: 3.6em; /* 3 lines of text, for example, adjust as necessary */
   overflow: hidden;
   position: relative;
-  padding-right: 1em
+  padding-right: 1em; /* Adjust as necessary for the ellipsis */
+  font-size: 1.2rem;
 }
 
 .card-text::after {
@@ -139,7 +140,7 @@ hr {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 50em) {
   .grid-container {
     grid-template-columns: 1fr;
   }

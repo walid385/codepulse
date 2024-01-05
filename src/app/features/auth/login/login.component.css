@@ -1,6 +1,6 @@
 .container {
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
@@ -30,11 +30,12 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
-
   box-shadow: 0 0.5em 0.9em rgba(0,0,0,0.5);
   background-color: rgba(255, 255, 255, 0.2);
 
 }
+
+
 
 .form-control {
   background-color: #1e1a22;
@@ -68,3 +69,33 @@ input:focus {
   font-size: 0.8em;
   opacity: 0.6;
 }
+
+@media (min-width: 1.6875em) and (max-width: 100em) {
+  
+  .container{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+  }
+
+  
+
+  .loginbtn{
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+  }
+}
+

@@ -18,6 +18,8 @@ import { HeroComponent } from './features/public/hero/hero.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 import { SliderComponent } from './features/public/slider/slider.component';
+import { AboutComponent } from './features/public/about/about.component';
+import { RecentComponent } from './features/public/recent/recent.component';
 const routes: Routes = [
 
   {
@@ -33,6 +35,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+
+  {
+    path: 'recent',
+    component: RecentComponent
   },
 
   {
@@ -55,6 +62,10 @@ const routes: Routes = [
   {
     path: 'categories/all',
     component: CategoryOverviewComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: '',

@@ -6,7 +6,7 @@
                   <div (click)="NaviToBlog(blog.urlHandle)" class="card h-100 border-0 m-2"
                        [ngClass]="{'disabled-blog': !blog.isVisible && user == undefined}"
                        style="cursor: pointer;">
-                      <img [src]="blog.featuredImageUrl || 'assets/pexels-photo-3342739.jpeg'" class="card-img-top" alt="{{blog.title}}">
+                      <img [src]="blog.featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" class="card-img-top" alt="{{blog.title}}">
                       <ng-container *ngIf="!blog.isVisible && user == undefined">
                           <div class="overlay-container">
                               <div class="overlay-text text-white d-flex flex-column">
@@ -21,6 +21,11 @@
                           <h5 class="card-title">{{blog.title}}</h5>
                           <hr>
                           <p class="card-text">{{blog.shortDescription}}</p>
+                          <div class="d-flex justify-content-between ">
+                            <p class="" style="color: #fff;">
+                                {{blog.publishedDate | date: 'mediumDate'}}
+                            <p>By, {{blog.author}}</p>
+                        </div>
                           <span class="mt-auto">
                               <a [routerLink]="['/blog', blog.urlHandle]" class="btn btn-outline-light btnread">Read More</a>
                           </span>

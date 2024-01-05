@@ -4,6 +4,7 @@ nav{
     box-shadow: rgba(0, 0, 0, .9) 0px 5px 15px;
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 
 nav li a{
@@ -11,18 +12,18 @@ nav li a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 nav a{
     color: #fff;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .logoname{
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: calc(1.5rem + 1vw);
     font-weight: 700;
     letter-spacing: 2px;
     background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
@@ -44,8 +45,9 @@ nav a{
     background: linear-gradient(to bottom right, #d4d0d0 0%, #FFFFFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-  }
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    }
 
   .vr{
     background: #fff;
@@ -54,17 +56,13 @@ nav a{
 
   .roles{
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-  }
-
-  .mail{
-    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
   }
 
+
   .logoutt{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
 /* width */

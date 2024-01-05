@@ -32,6 +32,8 @@ import { ResetPasswordComponent } from './features/auth/reset-password/reset-pas
 import { FooterComponent } from './core/components/footer/footer/footer.component';
 import { SliderComponent } from './features/public/slider/slider.component';
 import { AboutComponent } from './features/public/about/about.component';
+import { RecentComponent } from './features/public/recent/recent.component';
+import { TrendComponent } from './features/public/trend/trend.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { AboutComponent } from './features/public/about/about.component';
     FooterComponent,
     SliderComponent,
     AboutComponent,
+    RecentComponent,
+    TrendComponent,
   ],
   imports: [
     BrowserModule,
