@@ -39,7 +39,6 @@ export class CategoriyBlogsComponent implements OnInit {
               this.category.forEach((category) => {
                 if (category.id === this.id) {
                   this.categoryBlog = category.blogPosts;
-                  console.log(this.categoryBlog);
                 }
               });
               this.isLoading = false; // Set loading to false when blogs are loaded

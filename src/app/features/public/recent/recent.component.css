@@ -22,11 +22,11 @@
 }
 
 .card h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .content hr{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border: 1px solid white;
   margin-bottom: 1rem;
@@ -53,8 +53,9 @@
 
 .card .content p {
   font-size: 1.5rem;
-  padding: 0.3em 1.5em;
   text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 .card:hover .content {
@@ -107,6 +108,10 @@
 
 }
 
+.clickhand{
+  position: absolute;
+}
+
 
 
 .clickhand path {
@@ -128,24 +133,14 @@
 
 
 
-@media (min-width: 61.938em) and (max-width: 64em){
-  .clickhand{
-    z-index: 2;
-    position: relative;
-    top: 75%;
-    right: 50%;
-    transform: translate(50%, 0);
-    height: 4em;
-    width: 4em;
-  }
-}
+
 
 @media (min-width: 64.063em) and (max-width: 75em){
   .clickhand{
     z-index: 2;
-    position: relative;
-    top: 75%;
-    right: 50%;
+    position: absolute;
+    top: 80%;
+    right: 80%;
     transform: translate(50%, 0);
     height: 4em;
     width: 4em;
@@ -168,11 +163,12 @@
   .clickhand{
     z-index: 2;
     position: relative;
-    top: 75%;
-    right: 50%;
+    top: 80%;
+    right: 80%;
     transform: translate(50%, 0);
     height: 4em;
     width: 4em;
+    position: absolute;
   }
 }
 
@@ -181,16 +177,42 @@
   .container{
     flex-direction: column;
     align-items: center;
-    height: 180vh;
+    height: 140vh;
+    animation: fade linear;
+    animation-timeline: scroll();
+    animation-duration: 1s;
+    transform: translateY(-50px);
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    1%{
+      opacity: 0.5;
+      transform: translateY(-5px);}
+    1.5%{
+      opacity: 1;
+      transform: translateY(5px);
+    }
   }
 
   .clickhand{
     z-index: 2;
     position: relative;
-    top: -300%;
-    right: 80%;
+    top: -450%;
+    right: 90%;
     rotate: 120deg;
     transform: translate(50%, 0);
+  }
+
+  .card{
+    min-width: 20rem;
+    min-height: 25rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
   }
 
 
@@ -218,4 +240,55 @@
     border-radius: 50%;
   
   }
+}
+
+@media (min-width: 43.75em) and (max-width: 50.062em) {
+
+  .container{
+    animation: fade linear;
+    animation-timeline: scroll();
+    animation-duration: 1s;
+    transform: translateY(-200px);
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    1%{
+      opacity: 0.5;
+      transform: translateY(-5px);}
+    1.5%{
+      opacity: 1;
+      transform: translateY(5px);
+    }
+  }
+
+
+}
+
+@media (min-width: 50.063em) and (max-width: 161.938em) {
+
+  .container{
+    animation: fade linear;
+    animation-timeline: scroll();
+    animation-duration: 1s;
+    transform: translateY(-400px);
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    1%{
+      opacity: 0.5;
+      transform: translateY(-5px);}
+    1.5%{
+      opacity: 1;
+      transform: translateY(5px);
+    }
+  }
+
 }

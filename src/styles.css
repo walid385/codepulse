@@ -14,6 +14,7 @@ Use a better box model (opinionated).
 html{
 	margin: 0;
 	padding: 0;
+	overflow-x: clip;
 }
 
 :root {
@@ -30,6 +31,7 @@ Sections
 
 body {
 	margin: 0; /* Remove the margin in all browsers. */
+	overflow-x: clip;
 }
 
 /*

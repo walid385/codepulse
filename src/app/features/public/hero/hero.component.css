@@ -55,15 +55,6 @@
   text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
   }
 
-  .arrow {
-    width: 15em;
-    height: 31em;
-    position: absolute;
-    top: 85%;
-    left: 42%;
-    transform: translate(-50%, 0);
-    z-index: -300;
-  }
 
 
 
@@ -320,11 +311,6 @@
     display: none; 
   }
 
-  .arrow{
-    
-    display: none;
-  }
-
   .arrow-down {
     display: block;
     width: 60px;
@@ -403,7 +389,7 @@
     .arrow-down{
       position: absolute;
       left: 52%;
-      top: 120%;
+      top: 110%;
     }
   
 
