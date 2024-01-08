@@ -2,7 +2,6 @@
     
         <div class="container py-1">
             <h1 class="h1 text-center" id="pageHeaderTitle">Trending Articles</h1>
-            <hr>
             <ng-container *ngIf="blogPosts$ && blogPosts$.length > 0">
                 <article class="postcard dark blue" (click)="naviToArticles(blogPosts$[1].urlHandle)">
                     <a class="postcard__img_link" href="#">
@@ -14,11 +13,15 @@
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[1].publishedDate | date }}
                             </time>
+                            <br>
+                            <div class="authortext">
+                                <i class="fas fa-user mr-2"></i> {{ blogPosts$[1].author }}
+                            </div>
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">{{ blogPosts$[1].shortDescription }}</div>
                         <ul class="postcard__tagbox">
-                            <a  class=" btn btn-primary">Read More</a>
+                            <a  class=" btn readbtn">Read More</a>
                         </ul>
                     </div>
                 </article>
@@ -32,11 +35,15 @@
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[3].publishedDate | date }}
                             </time>
+                            <br>
+                            <div class="authortext">
+                                <i class="fas fa-user mr-2"></i> {{ blogPosts$[3].author }}
+                            </div>
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">{{ blogPosts$[3].shortDescription }}</div>
                         <ul class="postcard__tagbox">
-                            <a  class=" btn btn-primary" style="z-index: 2;">Read More</a>
+                            <a  class=" btn readbtn" style="z-index: 2;">Read More</a>
                         </ul>
                     </div>
                 </article>
@@ -50,11 +57,15 @@
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[4].publishedDate | date }}
                             </time>
+                            <br>
+                            <div class="authortext">
+                                <i class="fas fa-user mr-2"></i> {{ blogPosts$[4].author }}
+                            </div>
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">{{ blogPosts$[4].shortDescription }}</div>
                         <ul class="postcard__tagbox">
-                            <a  class=" btn btn-primary" style="z-index: 2;">Read More</a>
+                            <a  class=" btn readbtn" style="z-index: 2;">Read More</a>
                         </ul>
                     </div>
                 </article>
@@ -69,14 +80,20 @@
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[5].publishedDate | date }}
                             </time>
+                            <br>
+                            <div class="authortext">
+                                <i class="fas fa-user mr-2"></i> {{ blogPosts$[5].author }}
+                            </div>
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">{{ blogPosts$[5].shortDescription }}</div>
                         <ul class="postcard__tagbox">
-                            <a  class=" btn btn-primary" style="z-index: 2;">Read More</a>
+                            <a  class=" btn readbtn" style="z-index: 2;">Read More</a>
                         </ul>
                     </div>
                 </article>
             </ng-container>
         </div>
 </section>
+<app-slider></app-slider>
+

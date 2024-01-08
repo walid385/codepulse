@@ -3,13 +3,6 @@
 
 }
 
-hr{
-    border: none;
-    height: 1px;
-    background-color: #ffffff;
-    width: 50%;
-    margin: 2rem auto;
-}
 
 .dark{
 
@@ -27,11 +20,12 @@ a:hover {
 }
 
 #pageHeaderTitle {
-	margin: 1rem 0 2rem 0;
+	margin: 1rem 0 3rem 0;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.5rem;
     color: #ffffff;
+	text-decoration: underline;
 
 }
 
@@ -111,6 +105,8 @@ a:hover {
 	display: flex;
 	flex-direction: column;
     font-size: 1.5rem;
+	z-index: 2;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .postcard .postcard__preview-txt {
@@ -141,6 +137,20 @@ a:hover {
 	transition: background-color 0.3s;
 }
 
+.readbtn{
+	background: linear-gradient(to bottom right, #ac93ff 0%, #630101 100%);
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: #ffffff;
+	font-size: 1.5rem;
+	box-shadow: 4px 3px 10px 5px rgb(0, 0, 0);
+}
+
+.readbtn:hover{
+	background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+}
+
 .postcard .postcard__tagbox .tag__item:hover {
 	background: rgba(83, 83, 83, 0.8);
 }
@@ -163,7 +173,7 @@ a:hover {
 
 @media screen and (min-width: 701px) {
     #pageHeaderTitle {
-        margin: 8rem 0 2rem 0;
+        margin: 5rem 0 5rem 0;
         text-transform: uppercase;
         text-align: center;
         font-size: 2.5rem;
@@ -172,10 +182,10 @@ a:hover {
     }
 
     .dark{
+
         animation: fade linear;
         animation-timeline: scroll();
         animation-duration: 1s;
-        transform: translateY(-50px);
       }
     
       @keyframes fade {
@@ -196,7 +206,7 @@ a:hover {
 @media screen and (min-width: 769px) {
 
     #pageHeaderTitle {
-        margin: 5rem 0 2rem 0;
+        margin: 5rem 0 5rem 0;
         text-transform: uppercase;
         text-align: center;
         font-size: 2.5rem;

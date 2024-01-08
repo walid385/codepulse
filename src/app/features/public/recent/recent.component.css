@@ -150,9 +150,9 @@
 @media (min-width: 75em) and (max-width: 100em){
   .clickhand{
     z-index: 2;
-    position: relative;
-    top: 75%;
-    right: 50%;
+    position: absolute;
+    top: 80%;
+    right: 85%;
     transform: translate(50%, 0);
     height: 4em;
     width: 4em;
@@ -275,6 +275,8 @@
     animation-timeline: scroll();
     animation-duration: 1s;
     transform: translateY(-400px);
+    height: 40vh;
+
   }
 
   @keyframes fade {

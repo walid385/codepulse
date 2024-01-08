@@ -1,7 +1,7 @@
 
 
-<div class="wrapper mt-3">
-    <div class="container my-3">
+<div class="wrapper">
+    <div class="container">
         <h1 class="text-center sectitle m-3">Categories</h1>
       <div class="my-2 ">
         <ng-container *ngIf="category$ | async as categories">
@@ -13,8 +13,9 @@
                 <div class="ag-courses_item" (click)="jaja(category.id)" [routerLink]="['/categories/blogs', category.id]">
                   <!-- Category Link and Background -->
                   <div class="ag-courses-item_link">
-                    <div class="ag-courses-item_bg" [style.background]=" ">           
-                    </div>
+                      <div class="ag-courses-item_bg" [style.background]=" ">
+                      </div>
+
                     <div class="ag-courses-item_title">{{ category.name }}</div>
                   </div>
                 </div>
@@ -32,7 +33,11 @@
             </div>
           </div>
         </ng-container>
-        <a class="d-flex justify-content-center align-content-center mt-5 btn btn-primary linkcategory" [routerLink]="['/categories/all']">All Categories</a>
-      </div>
+        </div>
+    </div>
+    <div class=" d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center"><a class="d-flex justify-content-center align-content-center m-5 btn linkcategory" [routerLink]="['/categories/all']">All Categories</a></div>
     </div>
 </div>
+
+

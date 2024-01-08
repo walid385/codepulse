@@ -263,6 +263,8 @@
 
   .arrow-down{
     display: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
 
@@ -316,9 +318,9 @@
     width: 60px;
     height: 40px;
     position: absolute;
-    left: 52%; /* Center horizontally */
+    left: 53%; /* Center horizontally */
     top: 110%; /* Align to bottom */
-    transform: translateX(-50%); /* Center arrow shape */
+    transform: translateX(-50%); /* Move to center */
     animation: arrow 0.5s 1s infinite ease-out alternate;
   }
 
@@ -385,15 +387,6 @@
     }
   }
 
-  @media (min-width: 48em) and (max-width: 50em) {
-    .arrow-down{
-      position: absolute;
-      left: 52%;
-      top: 110%;
-    }
-  
-
-  }
 
 }
 

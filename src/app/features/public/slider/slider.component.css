@@ -1,16 +1,4 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
 
-  html {
-    --s: 50px;
-    --c: #191b22;
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
-  }
   
   body {
     display: flex;
@@ -30,24 +18,26 @@ html, body {
   }
 
   .linkcategory{
-    position: relative;
-    width: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 1rem 2rem 1rem 2rem; 
     font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    box-shadow: 4px 3px 10px 5px rgb(0, 0, 0);
+    background: linear-gradient(to bottom right, #ac93ff 0%, #630101 100%);
+  }
+
+  .linkcategory:hover{
+    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
   }
 
   .sectitle{
     font-family: 'Roboto', sans-serif;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 2px;
-    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0 ,0, 0.6);
-    z-index: 1;
+    text-decoration: underline;
+    color: #ffffff;
+    margin-top: 5rem;
   }
 
   
@@ -56,10 +46,6 @@ html, body {
     height: 100vh; /* This will make the slider container full height */
     display: flex;
     flex-direction: column;
-    animation: fade linear;
-    animation-timeline: scroll();
-    animation-duration: 1s;
-    transform: translateY(-500px);
   }
 
   .hrtitle{
@@ -68,29 +54,6 @@ html, body {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 222, 222, 0.75), rgba(0, 0, 0, 0));
   }
 
-
-  
-  @keyframes fade {
-    0% {
-      opacity: 0;
-      transform: translateY(-100px);
-    }
-    10%{
-      opacity: 0.5;
-      transform: translateY(-50px);
-    }
-    50% {
-      opacity: 0.9;
-      transform: translateY(0px);
-  
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(5px);
-  
-    }
-  }
-  
   .slider {
     position: relative;
     width: 80%;
@@ -269,24 +232,9 @@ html, body {
     right: .3em;
   }
 
-  .nav-buttons{
-    gap: 0.5em;
-  }
-
   .linkcategory{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    left: 40%
   }
 
-  .container{
-    transform: translateY(-50px);
-
-  }
-
-  @keyframes fade {
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-  
-    }
-  }
 }
