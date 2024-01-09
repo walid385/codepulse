@@ -41,4 +41,8 @@ export class ImageService {
     return this.selectedImage.asObservable();
   }
 
+  removeImage(id: string): Observable<any> {
+    return this.http.delete(`${environment.apiBaseUrl}/api/images/${id}`);
+  }
+
 }

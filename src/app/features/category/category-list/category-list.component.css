@@ -5,3 +5,26 @@ td:hover{
     box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.5);
     font-weight: 600;
 }
+
+.container{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+
+}
+
+tr a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.addcat{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+}

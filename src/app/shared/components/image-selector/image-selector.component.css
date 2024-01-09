@@ -1,0 +1,39 @@
+.wrapper{
+    font-size: 1rem;
+}
+
+.col-8{
+    max-height: 70vh;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.form-control{
+    font-size: 1.3rem;
+}
+
+.fa-trash{
+    color: red;
+    font-size: 1.9rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    border: 1px solid red;
+    padding: 0.5rem;
+}
+
+.fa-trash:hover{
+    color: #501283;
+    border: 1px solid #501283;
+}
+
+.imgdisplay:hover{
+    opacity: 0.5;
+}

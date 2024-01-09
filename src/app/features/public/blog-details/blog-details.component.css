@@ -15,6 +15,14 @@ img{
 
 }
 
+.blog-content::ng-deep img{
+    box-shadow: 0.8em 0.8em 0.9em rgba(0,0,0.5,0.8);
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+
 .mark{
     background-color: #ffffff;
 }

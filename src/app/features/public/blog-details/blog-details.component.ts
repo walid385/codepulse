@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogPostService } from '../../blog-post/services/blog-post.service';
 import { Observable } from 'rxjs';
@@ -31,8 +31,5 @@ export class BlogDetailsComponent implements OnInit {
     }
     this.spinner.hide();
   }
-
-
-
 
 }

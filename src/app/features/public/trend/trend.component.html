@@ -3,7 +3,8 @@
         <div class="container py-1">
             <h1 class="h1 text-center" id="pageHeaderTitle">Trending Articles</h1>
             <ng-container *ngIf="blogPosts$ && blogPosts$.length > 0">
-                <article class="postcard dark blue" (click)="naviToArticles(blogPosts$[1].urlHandle)">
+                <article class="postcard dark blue" (click)="naviToArticles(blogPosts$[1].urlHandle)"
+                style="cursor: pointer;">
                     <a class="postcard__img_link" href="#">
                         <img class="postcard__img"  [src]="blogPosts$[1].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
@@ -25,7 +26,8 @@
                         </ul>
                     </div>
                 </article>
-                <article class="postcard dark red" (click)="naviToArticles(blogPosts$[3].urlHandle)">
+                <article class="postcard dark red" (click)="naviToArticles(blogPosts$[3].urlHandle)"
+                style="cursor: pointer;">
                     <a class="postcard__img_link" href="#">
                         <img class="postcard__img"  [src]="blogPosts$[3].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
@@ -47,7 +49,8 @@
                         </ul>
                     </div>
                 </article>
-                <article class="postcard dark green" (click)="naviToArticles(blogPosts$[4].urlHandle)">
+                <article class="postcard dark green" (click)="naviToArticles(blogPosts$[4].urlHandle)"
+                style="cursor: pointer;">
                     <a class="postcard__img_link" href="#">
                         <img class="postcard__img"  [src]="blogPosts$[4].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
@@ -70,7 +73,8 @@
                     </div>
                 </article>
     
-                <article class="postcard dark yellow" (click)="naviToArticles(blogPosts$[5].urlHandle)">
+                <article class="postcard dark yellow" (click)="naviToArticles(blogPosts$[5].urlHandle)"
+                style="cursor: pointer;">
                     <a class="postcard__img_link" href="#">
                         <img class="postcard__img"  [src]="blogPosts$[5].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>

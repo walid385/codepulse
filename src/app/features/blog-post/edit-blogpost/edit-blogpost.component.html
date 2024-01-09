@@ -9,7 +9,7 @@
                 <div class="mt-3">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control bg-dark" 
                     id="title" 
                     name="title"
                     [(ngModel)]="model.title">
@@ -18,7 +18,7 @@
                 <div class="mt-3">
                     <label for="urlHandle" class="form-label">Url Handle</label>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control bg-dark" 
                     id="urlHandle" 
                     name="urlHandle"
                     [(ngModel)]="model.urlHandle">
@@ -28,7 +28,7 @@
                 <div class="mt-3">
                     <label for="shortDesc" class="form-label">Short Description</label>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control bg-dark" 
                     id="shortDesc" 
                     name="shortDesc"
                     [(ngModel)]="model.shortDescription">
@@ -39,31 +39,31 @@
                     <div class="d-flex flex-row">
                         <div class="col-6 p-2">
                             <textarea 
-                            class="form-control" 
+                            class="form-control bg-dark" 
                             id="content" 
                             name="content"
                             [(ngModel)]="model.content"
                             rows="10"
-                            style="height: 350px; max-height: 350px;"></textarea>
+                            style="height: 550px; max-height: 550px; color:#fff"></textarea>
                         </div>
-                        <div class="col-6 p-2 border" [ngClass]="{'border-info rounded':model.content !== ''}" style="max-height: 350px; overflow-y: scroll;">
+                        <div class="col-6 p-2 border markk" [ngClass]="{'border-info rounded':model.content !== ''}"  style="max-height: 550px; overflow-y: scroll;">
                                 <markdown [data]="model.content"></markdown>
                         </div>
                     </div>
     
                 <div class="mt-3">
                     <label for="featuredImgUrl" class="form-label">Featured Image Url
-                        <button type="button" class="btn btn-primary btn-sm ms-3" (click)="onOpenImageSelector()">Select Image</button>
-                        <button type="button" class="btn btn-danger btn-sm ms-3" (click)="onCloseImage()">Close Image</button>
+                        <button type="button" class="btn btn-primary btn-sm ms-3 mb-2" (click)="onOpenImageSelector()">Select Image</button>
+                        <button type="button" class="btn btn-danger btn-sm ms-3 mb-2" (click)="onCloseImage()">Close Image</button>
                     </label>
     
                     <ng-container *ngIf="model.featuredImageUrl !== ''">
                         <div >
-                            <img [src]="model.featuredImageUrl" height="100"  class=" my-4" alt="Featured Image" [ngClass]="{'border border-success': this.onOpenImageSelector}">
+                            <img [src]="model.featuredImageUrl" height="100"  class=" my-4 " alt="Featured Image" [ngClass]="{'border border-success': this.onOpenImageSelector}">
                         </div>
                     </ng-container>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control bg-dark" 
                     id="featuredImgUrl" 
                     name="featuredImgUrl"
                     [(ngModel)]="model.featuredImageUrl">
@@ -72,7 +72,8 @@
                 <div class="mt-3">
                     <label for="publishedDate" class="form-label">Published Date</label>
                     <input type="date" 
-                    class="form-control" 
+                    class="form-control bg-dark"
+                    style="color: #fff; width: 400px;"  
                     id="publishedDate" 
                     name="publishedDate"
                     value="{{model.publishedDate}}"
@@ -83,7 +84,7 @@
                 <div class="mt-3">
                     <label for="author" class="form-label">Author</label>
                     <input type="text" 
-                    class="form-control" 
+                    class="form-control bg-dark" 
                     id="author" 
                     name="author"
                     [(ngModel)]="model.author">
@@ -91,7 +92,7 @@
     
                 <div class="form-check mt-3">
                     <input type="checkbox" 
-                    class="form-check-input" 
+                    class="form-check-input bg-dark" 
                     id="isVisible" 
                     name="isVisible"
                     [(ngModel)]="model.isVisible">
@@ -100,10 +101,11 @@
                     </label>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-3 categories">
                     <label for="categories" class="form-label">Categories</label>
                     <ng-container *ngIf="categories$ | async as categories">
-                        <select class="form-select" 
+                        <select class="form-select bg-dark"
+                        style="color: #fff;"  
                         id="categories" multiple 
                         name="categories"
                         [(ngModel)]="selectedCategory">
@@ -113,8 +115,8 @@
                 </div> 
     
                 <div class="mt-3 mb-5">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-danger ms-3" (click)="onDelete()">Delete</button>
+                    <button type="submit" class="btn btn-primary savebtn">Save</button>
+                    <button type="button" class="btn btn-danger ms-3 deletebtn" (click)="onDelete()">Delete</button>
                 </div>
             </div>
         </div>

@@ -15,6 +15,7 @@
                 <div *ngIf="blogPost.categories" class="mt-4 ">
                     <span *ngFor="let category of blogPost.categories" class="badge bg-secondary me-2 badgess">{{category.name}}</span>
                 </div>
+                
 
                 <div class="mt-4 blog-content">
                     <markdown [data]="blogPost.content"></markdown> 

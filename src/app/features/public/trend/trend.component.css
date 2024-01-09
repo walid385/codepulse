@@ -299,7 +299,7 @@ a:hover {
 	color: black;
 }
 
-.green .postcard__title:hover {
+.green:hover .postcard__title {
 	color: #79dd09;
 }
 
@@ -319,7 +319,7 @@ a:hover {
 	background: #0076bd;
 }
 
-.blue .postcard__title:hover {
+.blue:hover .postcard__title {
 	color: #0076bd;
 }
 
@@ -339,7 +339,7 @@ a:hover {
 	background: #bd150b;
 }
 
-.red .postcard__title:hover {
+.red:hover .postcard__title {
 	color: #bd150b;
 }
 
@@ -360,7 +360,7 @@ a:hover {
 	color: black;
 }
 
-.yellow .postcard__title:hover {
+.yellow:hover .postcard__title {
 	color: #bdbb49;
 }
 

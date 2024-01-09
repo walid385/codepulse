@@ -1,0 +1,58 @@
+.container {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.form-control{
+    background-color: #130020;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    height: 3em;
+    font-size: 1.3rem;
+}
+
+.categories > select{
+    font-size: 1.4rem;
+}
+
+.btn{
+    font-size: 1.3rem;
+}
+
+.savebtn{
+    background-color: #130020;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    height: 3em;
+    font-size: 1.3rem;
+    color: #ffffff;
+    padding: 0.5em 1em;
+}
+
+.savebtn:hover{
+    background-color: #ffffff;
+    color: #130020;
+}
+
+.form-check > input{
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 0.5em;
+}
+
+.form-check {
+    display: flex;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+    align-items: center;
+
+}
+
+.markk{
+    background-color: #130020;
+}

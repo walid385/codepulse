@@ -37,14 +37,26 @@ export class ImageSelectorComponent implements OnInit {
           this.toastr.success('Image uploaded successfully');
           this.images$ = this.imageService.getAllImages();
           this.imageUploadForm?.reset();
-        }
+        },
+
       });
 
+    } else {
+      this.toastr.error('Please fill all fields');
     }
   }
 
   selectImage(image: BlogImage): void {
     this.imageService.selectImage(image);
   };
+
+  removeImage(id: string): void {
+    this.imageService.removeImage(id.toUpperCase()).subscribe({
+      next: (response) => {
+        this.toastr.warning('Image removed successfully');
+        this.images$ = this.imageService.getAllImages();
+      }
+    });
+  }
 
 }
