@@ -41,6 +41,10 @@ nav a{
     overflow-x: hidden; /* Hide horizontal scrollbar */
   }
 
+  .contenttainer{
+    display: flex;
+  }
+
   .mail{
     background: linear-gradient(to bottom right, #d4d0d0 0%, #FFFFFF 100%);
     -webkit-background-clip: text;
@@ -63,6 +67,7 @@ nav a{
   .logoutt{
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
+    margin-right: 1rem;
   }
 
 /* width */
@@ -81,3 +86,58 @@ nav a{
     background: rgba(0, 0, 0, 1);
     border-radius: 10px;
   }  
+
+  @media screen and (max-width: 992px) {
+    .mainlink{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #fff;
+    }
+
+    .dropdown-menu{
+      max-height: 350px;
+      overflow-y: auto; /* Enable vertical scrolling */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      border-bottom: hidden;
+    }
+
+    .dropdown-divider{
+      
+    }
+
+    #showLogout{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dynds{
+      flex-direction: column;
+    }
+
+    .contenttainer{
+      display: block;
+    }
+
+    .logoutt{
+      margin-right: 0;
+      margin-top: 1rem;
+    }
+
+
+
+    .roles{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .vr{
+      display: none;
+    }
+  }

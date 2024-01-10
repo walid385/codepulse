@@ -22,6 +22,10 @@
     font-size: 1.3rem;
 }
 
+.formmdate{
+    width: 40%;
+}
+
 .savebtn{
     background-color: #130020;
     border: none;

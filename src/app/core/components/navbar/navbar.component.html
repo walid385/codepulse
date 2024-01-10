@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"  [routerLink]="['/']">Home</a>
+            <a class="nav-link mainlink active" aria-current="page"  [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle mainlink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categories
             </a>
             <ul class="dropdown-menu bg-dark" >
@@ -24,15 +24,15 @@
                        
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/about']">About</a>
+            <a class="nav-link mainlink" [routerLink]="['/about']">About</a>
           </li>
           <ng-container *ngIf="user !== undefined && user.roles.includes('Writer')" >
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle mainlink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Admin
               </a>
               <ul class="dropdown-menu bg-dark">
-                <li><a class="dropdown-item" [routerLink]="['/admin/categories']">Categories</a></li>
+                <li><a class="dropdown-item " [routerLink]="['/admin/categories']">Categories</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" [routerLink]="['/admin/blogposts']">BlogPost</a></li>
               </ul>
@@ -41,19 +41,19 @@
         </ul>
         
         <ul>
-          <div class="d-flex mt-3">
+          <div class=" mt-3 contenttainer">
             <ng-container *ngIf="user == undefined;else showLogout ">
               <a [routerLink]="['/login']" class="btn btn-primary">Login</a>
               <a [routerLink]="['/register']" class="btn btn-primary ms-3">Register</a>
             </ng-container>
             <ng-template #showLogout>
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center dynds">
                 <span class="mail">{{user?.email}}</span>
                 <div class="vr m-2"></div>            
                 <hr class="dropdown-divider">
                 <span class="badge rounded-pill bg-danger m-1 roles " *ngFor="let roles of user?.roles" >{{roles.toUpperCase()}}</span>
                 <div class="vr m-2"></div>                      
-                <button class="btn btn-primary ms-3 logoutt" (click)="logout()">Logout</button>
+                <button class="btn btn-primary logoutt" (click)="logout()">Logout</button>
               </div>
             </ng-template>
             

@@ -17,6 +17,10 @@ tr a{
     color: #ffffff;
     text-decoration: none;
     font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .addcat{
@@ -27,4 +31,18 @@ tr a{
     padding: 0.5em 1em;
     border-radius: 10px;
     box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 425px){
+    .container{
+        font-size: 1.1rem;
+        overflow-y: scroll;
+    }
+
+    tr a{
+        font-size: 1.1rem;
+    }
+    .addcat{
+        font-size: 1.1rem;
+    }
 }

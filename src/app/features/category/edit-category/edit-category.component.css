@@ -1,0 +1,65 @@
+.container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    height: 90vh;
+  }
+
+.ctname > input {
+    background-color: #130020;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    height: 3em;
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .ctdisabled > input {
+    color: #868686;
+  }
+
+  .form-label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  
+  .btn{
+    font-size: 1.3rem;
+  }
+  
+  .savebtn{
+    background-color: #130020;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    height: 3em;
+    font-size: 1.3rem;
+    color: #ffffff;
+    padding: 0.5em 1em;
+  }
+  
+  .savebtn:hover{
+    background-color: #ffffff;
+    color: #130020;
+  }
+
+  .deletebtn{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.5);
+    height: 3em;
+    font-size: 1.3rem;
+    color: #ffffff;
+    padding: 0.5em 1em;
+  }
+
+  .titleh1{
+    font-size: 3rem;
+    margin-bottom: 2em;
+  }
+  

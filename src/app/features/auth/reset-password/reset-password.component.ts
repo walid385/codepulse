@@ -50,11 +50,12 @@ export class ResetPasswordComponent implements OnInit{
         this.spinner.hide();
         console.log(err)
         Swal.fire({
-          title: 'Error!',
-          text: 'Something went wrong! Please try again',
+          title: '<h1>Error!</h1>', 
+          html: '<p style="font-size: 2rem;">Something went wrong, try again!</p>',
           icon: 'error',
-          confirmButtonText: 'Ok'
-          });
+          confirmButtonText: '<span style="font-size: 1.5rem;">OK</span>',
+          confirmButtonColor: '#3f7e2e'
+        });
       }
     });
   }

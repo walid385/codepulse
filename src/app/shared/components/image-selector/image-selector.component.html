@@ -3,13 +3,13 @@
         <div class="card-header">
             <h3 class="card-title" style="color: #fff;">Images</h3>
             <div class="card-body">
-                <div class="d-flex flex-md-row flex-sm-column flex-wrap">
+                <div class="d-flex flex-wrap">
                     <div class="col-8 p-4" style="overflow-y: scroll;">
                         <ng-container *ngIf="images$ | async as images">
                             <div class="d-flex flex-wrap">
                                 <div *ngFor="let image of images"
                                 style="min-width: 70px; justify-content:center; cursor:pointer;"
-                                class=" me-1 bg-subtle d-flex align-items-center flex-column border p-3">   
+                                class=" maiwa me-1 bg-subtle d-flex align-items-center flex-column border p-3">   
                                     <i (click)="removeImage(image.id)" class="fa fa-trash" aria-hidden="true"></i>                                                           
                                     <img class="imgdisplay" (click)="selectImage(image)" [src]="image.url" [title]="image.title" style="height: 150px;">
                                     <span style="color: #fff; font-size: 1.2rem;" class="mt-1">{{image.title}}</span>

@@ -3,7 +3,7 @@
 }
 
 .col-8{
-    max-height: 70vh;
+    max-height: 60vh;
 }
 
 .card-title{
@@ -36,4 +36,26 @@
 
 .imgdisplay:hover{
     opacity: 0.5;
+}
+
+@media screen and (max-width: 768px){
+    .col-8{
+        max-height: 60vh; 
+    }
+
+    .imgdisplay{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px){
+    .col-8{
+        max-height: 60vh; 
+    }
+
+    .imgdisplay{
+        width: 100%;
+    }
+
 }

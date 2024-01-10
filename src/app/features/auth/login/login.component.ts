@@ -52,11 +52,13 @@ export class LoginComponent {
         const errorMessage = err.error ? err.error : 'An unknown error occurred';
       
         Swal.fire({
-          title: 'Error!',
-          text: errorMessage, // Displaying the specific error message
+          title: '<h1>Error!</h1>', 
+          html: '<p style="font-size: 2rem;">' + errorMessage + '</p>',
           icon: 'error',
-          confirmButtonText: 'Ok'
+          confirmButtonText: '<span style="font-size: 1.5rem;">OK</span>',
+          confirmButtonColor: '#3f7e2e'
         });
+        
       }
       
     });
