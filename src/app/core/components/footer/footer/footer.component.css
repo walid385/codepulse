@@ -1,15 +1,46 @@
 
   
   footer {
-    background: linear-gradient(to right, #141e30, #243b55);
-
+    background: linear-gradient(90deg, rgba(3,2,17,1) 37%, rgb(43, 3, 70) 76%);
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
   }
 
+  .linkfooter{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .linkfooter:hover{
+    color: #ac93ff;
+  }
+
+  .list-unstyled{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; 
+ 
+  }  
+
+  h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: start;
+  }
+
   .small{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
     color: #fff;
   }
 

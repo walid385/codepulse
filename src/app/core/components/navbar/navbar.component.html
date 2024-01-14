@@ -14,7 +14,7 @@
               Categories
             </a>
             <ul class="dropdown-menu bg-dark" >
-              <a class="dropdown-item " [routerLink]="['/blogpost/all']">All Articles</a>
+              <a class="dropdown-item " [routerLink]="['/categories/all']">All Categories</a>
               <hr class="dropdown-divider">
               <li *ngFor="let category of categories">
                 <a class="dropdown-item" [routerLink]="['/categories/blogs', category.id ]">{{category.name}}</a>

@@ -31,22 +31,24 @@ export class ConfirmEmailComponent implements OnInit {
       this.authService.confirmEmail(confirmEmail).subscribe({
         next: () => {
           Swal.fire({
-            title: 'Success!',
-            text: 'You have successfully confirmed your email! Please login to continue',
+            title: '<h1>Success!</h1>', 
+            html: '<p style="font-size: 2rem;">You have successfully confirmed your email! Please login to continue</p>',
             icon: 'success',
-            confirmButtonText: 'Start now'
-          });
-          this.router.navigateByUrl('/login');
-          this.spinner.hide();
+            confirmButtonText: '<span style="font-size: 1.5rem;">OK</span>',
+            confirmButtonColor: '#3f7e2e'
+            });
+            this.router.navigate(['/login']);
+            this.spinner.hide();
         },
         error: (err: any) => {
           this.spinner.hide();
           console.log(err);
           Swal.fire({
-            title: 'Error!',
-            text: 'Something went wrong! Please try again or contact support',
+            title: '<h1>Error!</h1>', 
+            html: '<p style="font-size: 2rem;">Something went wrong, try again!</p>',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: '<span style="font-size: 1.5rem;">OK</span>',
+            confirmButtonColor: '#3f7e2e'
           });
         }
     

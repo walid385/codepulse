@@ -13,7 +13,6 @@
 }
 
 .ag-format-container {
-    width: 1142px;
     margin: 0 auto;
   }
   
@@ -42,7 +41,6 @@
   
     border-radius: 28px;
     box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.8);
-    border : 1px solid #707070;
 
   }
   .ag-courses-item_link {
@@ -127,7 +125,7 @@
   
   
   
-  @media only screen and (max-width: 979px) {
+  @media only screen and (max-width: 992px) {
     .ag-courses_item {
       -ms-flex-preferred-size: calc(50% - 30px);
       flex-basis: calc(50% - 30px);
@@ -137,13 +135,13 @@
     }
   }
   
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 991px) {
     .ag-format-container {
       width: 96%;
     }
   
   }
-  @media only screen and (max-width: 639px) {
+  @media only screen and (max-width: 767px) {
     .ag-courses_item {
       -ms-flex-preferred-size: 100%;
       flex-basis: 100%;

@@ -42,10 +42,11 @@ export class ForgotPasswordComponent implements OnInit {
       next: () => {
         console.log(this.model)
         Swal.fire({
-          title: 'Success!',
-          text: 'An email has been sent to your email address, please check your email',
+          title: '<h1>Success!</h1>', 
+          html: '<p style="font-size: 2rem;">An email has been sent to your email address, please check your email</p>',
           icon: 'success',
-          confirmButtonText: 'Ok'
+          confirmButtonText: '<span style="font-size: 1.5rem;">OK</span>',
+          confirmButtonColor: '#3f7e2e'
           });
           this.model.email = '';
           this.spinner.hide();

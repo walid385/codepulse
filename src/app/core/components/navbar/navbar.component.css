@@ -63,6 +63,10 @@ nav a{
     font-size: 1.2rem;
   }
 
+  .navbar-toggler{
+    background-color: #020202;
+  }
+
 
   .logoutt{
     font-family: 'Poppins', sans-serif;
