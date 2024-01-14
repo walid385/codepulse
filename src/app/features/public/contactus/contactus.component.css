@@ -155,7 +155,7 @@
   
   .app-form-group.message {
     margin-top: 4rem;
-    height: 15rem;
+    max-height: 15rem;
 
   }
 
