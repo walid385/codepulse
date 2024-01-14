@@ -42,7 +42,7 @@ body {
 
 .about-img img {
   display: block;
-  width: 200px;
+  width: 100%;
 }
 
 .about-img {
@@ -118,7 +118,6 @@ body {
 
 .about-right h1 {
   font-size: 5rem;
-  text-transform: uppercase;
 }
 
 .about-right h1 span {
