@@ -34,6 +34,7 @@ import { SliderComponent } from './features/public/slider/slider.component';
 import { AboutComponent } from './features/public/about/about.component';
 import { RecentComponent } from './features/public/recent/recent.component';
 import { TrendComponent } from './features/public/trend/trend.component';
+import { ContactusComponent } from './features/public/contactus/contactus.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { TrendComponent } from './features/public/trend/trend.component';
     AboutComponent,
     RecentComponent,
     TrendComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,11 +20,17 @@ import { ResetPasswordComponent } from './features/auth/reset-password/reset-pas
 import { SliderComponent } from './features/public/slider/slider.component';
 import { AboutComponent } from './features/public/about/about.component';
 import { RecentComponent } from './features/public/recent/recent.component';
+import { ContactusComponent } from './features/public/contactus/contactus.component';
 const routes: Routes = [
 
   {
     path:'hero',
     component: HeroComponent
+  },
+
+  {
+    path:'contact',
+    component: ContactusComponent
   },
 
   {
