@@ -39,7 +39,7 @@ export class ContactusComponent {
       },
       (err: any) => {
         this.spinner.hide();
-        this.toastr.error('Message could not be sent');
+        this.toastr.error('Message could not be sent, try again later');
       }
     );
    }

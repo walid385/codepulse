@@ -1,7 +1,7 @@
 <section class="dark">
     
         <div class="container py-1">
-            <h1 class="h1 text-center" id="pageHeaderTitle">Trending Articles</h1>
+            <h1 class="h1 text-center" id="pageHeaderTitle"> <span class="underlined underline-mask">Trending Articles<span class="wow">!</span></span></h1>
             <ng-container *ngIf="blogPosts$ && blogPosts$.length > 0">
                 <article class="postcard dark blue" (click)="naviToArticles(blogPosts$[1].urlHandle)"
                 style="cursor: pointer;">

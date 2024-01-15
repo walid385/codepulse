@@ -23,11 +23,40 @@ a:hover {
 	margin: 1rem 0 3rem 0;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 3.5rem;
     color: #ffffff;
-	text-decoration: underline;
+	text-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+	font-family: 'Poppins', sans-serif;
 
 }
+
+.wow {
+	color: #7E00F6;
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+.underlined {
+	/*   background: red; */
+	  position: relative;
+	}
+	
+	.underline-mask:after {
+	  content: '';
+	  position: absolute;
+	  top: 80%;
+	  width: 150%;
+	  aspect-ratio: 3 / 1;
+	  left: 50%;
+	  transform: translate(-50%, 0);
+	  border-radius: 50%;
+	  border: 4px solid #7E00F6;
+	  /* Use a conic gradient mask to hide and show the bits you want */
+	  --spread: 140deg;
+	  --start: 290deg;
+	  mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+	}
+	
 
 /* Cards */
 .postcard {
@@ -77,6 +106,7 @@ a:hover {
 
     
 }
+
 
 .postcard .postcard__img {
 	max-height: 180px;

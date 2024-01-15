@@ -28,12 +28,43 @@
     margin-bottom: 1.5rem;
     text-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.5);
     font-weight: 700;
-    background: linear-gradient(to bottom right, #CF5A4D 0%, #d5c9fd 100%);
+/*     background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: #CFBEBE;
     position: relative;
     top: 40%;
   }
+
+  .wow {
+    color: #7D365E;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  
+  .underlined {
+    /*   background: red; */
+      position: relative;
+    }
+    
+    .underline-mask:after {
+      content: '';
+      position: absolute;
+      top: 90%;
+      width: 150%;
+      aspect-ratio: 3 / 1;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 50%;
+      border: 4px solid #7D365E;
+      /* Use a conic gradient mask to hide and show the bits you want */
+      --spread: 140deg;
+      --start: 290deg;
+      mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+    }
+
+
+
   .hero-name{
     text-decoration-line: underline;
     text-decoration-style: solid;

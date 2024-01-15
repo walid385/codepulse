@@ -31,14 +31,42 @@
   }
 
   .sectitle{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
     font-weight: 500;
     letter-spacing: 2px;
-    text-decoration: underline;
     color: #ffffff;
     margin-top: 5rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+
   }
+
+  .wow {
+    color: #7a0627;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  
+  .underlined {
+    /*   background: red; */
+      position: relative;
+    }
+    
+    .underline-mask:after {
+      content: '';
+      position: absolute;
+      top: 90%;
+      width: 150%;
+      aspect-ratio: 3 / 1;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 50%;
+      border: 4px solid #7a0627;
+      /* Use a conic gradient mask to hide and show the bits you want */
+      --spread: 140deg;
+      --start: 290deg;
+      mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+    }
 
   
   .container {
@@ -60,7 +88,7 @@
     overflow: hidden;
     flex: 1; /* Removed duplicate property */
     height: 320px;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
   
   .slides {
