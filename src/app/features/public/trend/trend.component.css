@@ -168,7 +168,7 @@ a:hover {
 }
 
 .readbtn{
-	background: linear-gradient(to bottom right, #ac93ff 0%, #630101 100%);
+	background: linear-gradient(to bottom right, #7E00F5 0%, #E317FE 100%);
 	border: none;
 	border-radius: 5px;
 	padding: 10px 20px;
@@ -178,7 +178,7 @@ a:hover {
 }
 
 .readbtn:hover{
-	background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+	background: linear-gradient(to bottom right, #E317FE 0%, #7E00F5 100%);
 }
 
 .postcard .postcard__tagbox .tag__item:hover {
@@ -199,6 +199,14 @@ a:hover {
 
 .postcard:hover .postcard__bar {
 	width: 100px;
+}
+
+@media screen and (max-width: 373px) {
+
+	.underline-mask:after {
+		top: 90%;
+	}
+	
 }
 
 @media screen and (min-width: 701px) {

@@ -23,11 +23,11 @@
     font-size: 1.5rem;
     color: #ffffff;
     box-shadow: 4px 3px 10px 5px rgb(0, 0, 0);
-    background: linear-gradient(to bottom right, #ac93ff 0%, #630101 100%);
+    background: linear-gradient(to bottom right, #7E00F5 0%, #E317FE 100%);
   }
 
   .linkcategory:hover{
-    background: linear-gradient(to bottom right, #630101 0%, #ac93ff 100%);
+    background: linear-gradient(to bottom right, #E317FE 0%, #7E00F5 100%);
   }
 
   .sectitle{
@@ -264,4 +264,12 @@
     left: 40%
   }
 
+}
+
+@media screen and (min-width: 768px) {
+
+  .ag-courses-item_bg {
+    width: 138px;
+  }
+  
 }
