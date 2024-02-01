@@ -91,8 +91,8 @@ body {
   list-style-type: none;
   background: #B721FF;
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   margin: 0 0.5rem;
   border-radius: 50%;
   display: flex;
@@ -103,9 +103,26 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.icons li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.icons li i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fab {
+  width: 5rem;
+  height: 5rem;
+}
+
+
 .icons li:hover {
-  background: #edffec;
-  color: #000;
+  background: #000000;
+  color: #ffffff;
 }
 
 .about-right {
@@ -137,6 +154,22 @@ body {
   font-size: 1.5rem;
   text-align: justify;
 
+}
+
+.credit {
+  text-align: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #B721FF;
+  font-weight: bold;
+}
+
+.credit a:hover{
+  color: #bc72df;
 }
 
 @media screen and (max-width: 576px) {
@@ -193,14 +226,4 @@ body {
   }
 }
 
-.credit {
-  text-align: center;
-  color: #fff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
-.credit a {
-  text-decoration: none;
-  color: #B721FF;
-  font-weight: bold;
-}

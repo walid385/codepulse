@@ -168,8 +168,12 @@
 
   .app-contact a {
     text-decoration: none;
-    color: #ea1d6f;
+    color: #e95691;
     font-weight: bold;
+  }
+
+  .app-contact a:hover{
+    color: #ea1d6f;
   }
   
   .app-form-group {
