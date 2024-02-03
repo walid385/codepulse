@@ -5,11 +5,11 @@
             <ng-container *ngIf="blogPosts$ && blogPosts$.length > 0">
                 <article class="postcard dark blue" (click)="naviToArticles(blogPosts$[1].urlHandle)"
                 style="cursor: pointer;">
-                    <a class="postcard__img_link" href="#">
+                    <a class="postcard__img_link"  [routerLink]="['/article', blogPosts$[1].urlHandle]">
                         <img class="postcard__img"  [src]="blogPosts$[1].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
                     <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">{{ blogPosts$[1].title }}</a></h1>
+                        <h1 class="postcard__title blue"><a  [routerLink]="['/article', blogPosts$[1].urlHandle]">{{ blogPosts$[1].title }}</a></h1>
                         <div class="postcard__subtitle small">
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[1].publishedDate | date }}
@@ -28,11 +28,11 @@
                 </article>
                 <article class="postcard dark red" (click)="naviToArticles(blogPosts$[3].urlHandle)"
                 style="cursor: pointer;">
-                    <a class="postcard__img_link" href="#">
+                    <a class="postcard__img_link"  [routerLink]="['/article', blogPosts$[3].urlHandle]">
                         <img class="postcard__img"  [src]="blogPosts$[3].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
                     <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">{{ blogPosts$[3].title }}</a></h1>
+                        <h1 class="postcard__title blue"><a  [routerLink]="['/article', blogPosts$[3].urlHandle]">{{ blogPosts$[3].title }}</a></h1>
                         <div class="postcard__subtitle small">
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[3].publishedDate | date }}
@@ -51,11 +51,11 @@
                 </article>
                 <article class="postcard dark green" (click)="naviToArticles(blogPosts$[4].urlHandle)"
                 style="cursor: pointer;">
-                    <a class="postcard__img_link" href="#">
+                    <a class="postcard__img_link"  [routerLink]="['/article', blogPosts$[4].urlHandle]">
                         <img class="postcard__img"  [src]="blogPosts$[4].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
                     <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">{{ blogPosts$[4].title }}</a></h1>
+                        <h1 class="postcard__title blue"><a  [routerLink]="['/article', blogPosts$[4].urlHandle]">{{ blogPosts$[4].title }}</a></h1>
                         <div class="postcard__subtitle small">
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[4].publishedDate | date }}
@@ -75,11 +75,11 @@
     
                 <article class="postcard dark yellow" (click)="naviToArticles(blogPosts$[5].urlHandle)"
                 style="cursor: pointer;">
-                    <a class="postcard__img_link" href="#">
+                    <a class="postcard__img_link"  [routerLink]="['/article', blogPosts$[5].urlHandle]">
                         <img class="postcard__img"  [src]="blogPosts$[5].featuredImageUrl || 'assets/images/pexels-photo-3342739.jpeg'" alt="Image Title" />
                     </a>
                     <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">{{ blogPosts$[5].title }}</a></h1>
+                        <h1 class="postcard__title blue"><a  [routerLink]="['/article', blogPosts$[5].urlHandle]">{{ blogPosts$[5].title }}</a></h1>
                         <div class="postcard__subtitle small">
                             <time >
                                 <i class="fas fa-calendar-alt mr-2"></i> {{ blogPosts$[5].publishedDate | date }}
