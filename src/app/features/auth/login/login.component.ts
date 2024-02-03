@@ -43,9 +43,7 @@ export class LoginComponent {
 
         // Redirect to Home
         this.router.navigateByUrl('/');
-        this.toastr.success(`Hello, ${response.email}!`, '', { 
-          toastClass: 'custom-toast-success'
-        });
+        this.toastr.success(`Hello, ${response.email}!`);
           this.spinner.hide();
       },
       error: err => {
