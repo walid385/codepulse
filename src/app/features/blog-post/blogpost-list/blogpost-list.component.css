@@ -10,7 +10,11 @@ td:hover{
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     color: #ffffff;
+    overflow-x: scroll;
+}
 
+.jstce{
+    justify-content: end;
 }
 
 tr a{
@@ -52,3 +56,9 @@ tr a{
     }
   }
   
+
+  @media screen and (max-width: 768px) {
+    .jstce{
+        justify-content: start;
+    }
+  }
