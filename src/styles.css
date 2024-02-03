@@ -316,10 +316,6 @@ body {
 	background: linear-gradient(90deg, rgb(36, 16, 56) 0%, rgb(45, 31, 70) 61%);
   }
 
-  /* Message */  
-.toast-message {
-	margin: 0;
-	font-size: 14px;
-  }
+
   
   

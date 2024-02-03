@@ -18,6 +18,9 @@ input {
   font-weight: 500;
 }
 
+.custom-toast-success {
+  font-size: 2rem;
+}
 
 
 

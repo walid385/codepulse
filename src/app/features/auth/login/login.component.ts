@@ -43,11 +43,12 @@ export class LoginComponent {
 
         // Redirect to Home
         this.router.navigateByUrl('/');
-        this.toastr.success(`Hello, ${response.email}!`, '', {
-          toastClass: 'custom-toast-success',
-          closeButton:true
+        this.toastr.success(`Hello, ${response.email}!`, '', { 
+          closeButton: true,
+          enableHtml: true,
+          toastClass: 'custom-toast-success' // Add this class for customization
         });
-        this.spinner.hide();
+                this.spinner.hide();
       },
       error: err => {
         this.spinner.hide();
